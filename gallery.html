@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Photo Gallery</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./src/css/style.css">
+	<link rel="icon" type="image/png" sizes="32x32" href="./src/images/favicon.png">
+</head>
+<body>
+	<div class="he">
+		<header class="cheader">
+		<h2>Photo Gallery</h2>
+		</header>
+	</div>
+	<div class="divcontainer">
+		<div class="content">
+			<div class="cgroup-content">
+			  <a href="index.html">
+				<div class="cbox">
+				  <p><b>Home</b></p>
+				</div>
+			  </a>
+			  <a href="personal_info.html">
+				<div class="cbox">
+				  <p><b>Personal Info</b></p>
+				</div>
+			  </a>
+			  <a href="education.html">
+				<div class="cbox">
+				  <p><b>Education</b></p>
+				</div>
+			  </a>
+			  <a href="skills.html">
+				<div class="cbox">
+				  <p><b>Skills and Training</b></p>
+				</div>
+			  <a href="projects.html">
+				<div class="cbox">
+				  <p><b>Projects</b></p>
+				</div>
+			  </a>
+			  </a>
+			  <a href="gallery.html" class="nav-link">
+				<div class="cbox">
+				  <p><b>Photo Gallery</b></p>
+				</div>
+			  </a>
+			    <a href="feedback.html">
+				<div class="cbox">
+				  <p><b>Feedback</b></p>
+				</div>
+			  </a>
+			</div>
+		</div>
+	</div>
+	<div class="divcontainer">
+		<div class="container">
+			<fieldset>
+				<legend>Photo Gallery</legend>
+				    <table class="photo-gallery">
+        <tr>
+          <td><img src="./src/images/robotics.jpg" alt="image 1" /><p><strong>Robotics</strong></p></td>
+          <td><img src="./src/images/coding.jpg" alt="image 2" /><p><strong>Coding</strong></p></td>
+          <td><img src="./src/images/gaming.jpg" alt="image 3" /><p><strong>Gaming</strong></p></td>
+        </tr>
+        <tr>
+          <td><img src="./src/images/endorsing.png" alt="image 4" /><p><strong>Endorsing</strong></p></td>
+          <td><img src="./src/images/studying.jpg" alt="image 5" /><p><strong>Studying</strong></p></td>
+          <td><img src="./src/images/photography.jpg" alt="image 6" /><p><strong>Photography</strong></p></td>
+        </tr>
+        <tr>
+          <td><img src="./src/images/resting.jpg" alt="image 7" /><p><strong>Resting</strong></p></td>
+          <td><img src="./src/images/designing.png" alt="image 8" /><p><strong>Logo Designing</strong></p></td>
+          <td><img src="./src/images/soldering.jpg" alt="image 9" /><p><strong>Soldering</strong></p></td>
+        </tr>
+      </table>
+			</fieldset>	
+		</div>
+	</div>
+<script>
+  const galleryItems = document.querySelectorAll('.photo-gallery img');
+
+  galleryItems.forEach(img => {
+    img.addEventListener('click', () => {
+      const parent = img.closest('td'); 
+      parent.classList.toggle('show-description'); 
+    });
+  });
+</script>
+</body>
+</html>
